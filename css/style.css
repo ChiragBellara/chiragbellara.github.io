@@ -45,7 +45,6 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  scroll-behavior: smooth;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -8966,6 +8965,12 @@ h1, h2, h3, h4, h5,
     
     /* Media queries to adjust pill styles for smaller screens */
     @media (max-width: 600px) {
+      .project-card {
+        float: left;
+        padding: 1rem;
+        min-width: 400px;
+      }
+
       .tech-stack-pill {
         font-size: 10px;
         padding: 3px 8px;
@@ -10038,13 +10043,13 @@ article.active {
   
   .timeline-item-title {
 	font-size: 24px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
   margin-top: 10px;
   }
 
   .timeline-item-subtitle {
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: hsl(45, 54%, 58%);
     }
   
@@ -10084,6 +10089,7 @@ article.active {
 	color: hsl(0, 0%, 84%);
 	font-weight: 300;
 	line-height: 1.6;
+  margin-bottom: 10px;
   }
 
 
@@ -10093,7 +10099,7 @@ article.active {
     justify-content: space-between;
     position: relative;
     top: 50%;
-    transform: translateY(-20%);
+    transform: translateY(-10%);
     overflow: hidden;
     padding: 0;
     white-space: normal; /* Change this to normal to allow wrapping */
