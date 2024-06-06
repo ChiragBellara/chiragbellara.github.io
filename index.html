@@ -84,55 +84,51 @@
         </div>
       </div>
     </nav>
-    <section id="home-section" class="hero">
-      <div class="home-slider owl-carousel">
-        <div class="slider-item">
-          <div class="overlay"></div>
-          <div class="container">
-            <div
-              class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
-              data-scrollax-parent="true"
-            >
-              <div
-                class="one-third js-fullheight order-md-last img"
-                style="background-image: url(images/about_bg_1_old.png)"
-              >
-                <div class="overlay"></div>
-              </div>
-              <div class="one-forth d-flex align-items-center ftco-animate">
-                <div class="text">
-                  <h1 class="mb-4 mt-3">Hi, I'm <span>Chirag Bellara</span></h1>
-                  <h4 class="mb-2">
-                    I am skilled in
-                    <a
-                      href=""
-                      class="typewrite"
-                      data-period="2000"
-                      data-type='[ "Full Stack Development.", "Machine Learning.", "Data Science."]'
-                    >
-                      <span class="wrap"></span>
-                    </a>
-                  </h4>
-                  <div class="socials-stack" style="font-size: 28px">
-                    <span class="mr-2"
+    <section>
+      <div class="particle-container">
+        <div class="row">
+          <div id="particles-js"></div>
+          <div id="header" style="display: block">
+            <div class="header-content">
+              <div class="header-content-box">
+                <div class="firstline">
+                  <h1 class="mb-4 mt-3">
+                    Hi, I'm
+                    <span style="color: #ffbd39">Chirag Bellara</span>
+                  </h1>
+                </div>
+                <h4 class="">
+                  I am skilled in
+                  <a
+                    href=""
+                    class="typewrite"
+                    data-period="2000"
+                    data-type='[ "Full Stack Development.", "Machine Learning.", "Data Science."]'
+                  >
+                    <span class="wrap"></span>
+                  </a>
+                </h4>
+                <div class="contact">
+                  <div class="" style="font-size: 28px">
+                    <span class="social-media mr-2"
                       ><a
                         href="https://www.linkedin.com/in/chiragbellara/"
                         target="_blank"
                         ><span class="icon-linkedin"></span></a
                     ></span>
-                    <span class="mr-2"
+                    <span class="social-media mr-2"
                       ><a
                         href="https://github.com/ChiragBellara"
                         target="_blank"
                         ><span class="icon-github"></span></a
                     ></span>
-                    <span class="mr-2"
+                    <span class="social-media mr-2"
                       ><a
                         href="https://medium.com/@ChiragBellara"
                         target="_blank"
                         ><span class="icon-medium"></span></a
                     ></span>
-                    <span class="mr-2"
+                    <span class="social-media mr-2"
                       ><a href="mailto:chiragbellara7@gmail.com" target="_blank"
                         ><span class="icon-mail_outline"></span></a
                     ></span>
@@ -141,17 +137,20 @@
                     <a
                       href="#resume-section"
                       class="btn btn-white btn-outline-white py-3 px-3"
+                      id="header-btns"
                       >View Experience</a
                     >
                     <a
                       href="#projects-section"
                       class="btn btn-white btn-outline-white py-3 px-3"
+                      id="header-btns"
                       >View Projects</a
                     >
                   </p>
                 </div>
               </div>
             </div>
+            <div class="js-count-particles"></div>
           </div>
         </div>
       </div>
@@ -203,6 +202,7 @@
                 </p>
                 <p>
                   <a
+                    id="download-resume-btn"
                     target="_blank"
                     href="https://drive.google.com/file/d/1-TMld_Tiq_BO6arIj0MiHIfXLuZ6qcj4/view?usp=sharing"
                     class="btn btn-primary py-3 px-3"
@@ -862,7 +862,8 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script
       src="https://kit.fontawesome.com/2a29ba4b69.js"
       crossorigin="anonymous"
@@ -870,6 +871,83 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="js/main.js"></script>
     <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 127, density: { enable: true, value_area: 700 } },
+          color: { value: "#ffbd39" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000000" },
+            polygon: { nb_sides: 7 },
+            image: { src: "img/github.svg", width: 100, height: 100 },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 3,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: { enable: false, rotateX: 600, rotateY: 1200 },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onclick: { enable: true, mode: "grab" },
+            onhover: { enable: true, mode: "repulse" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 400, line_linked: { opacity: 1 } },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: { distance: 200, duration: 0.4 },
+            push: { particles_nb: 4 },
+            remove: { particles_nb: 2 },
+          },
+        },
+        retina_detect: true,
+      });
+      var count_particles, stats, update;
+      count_particles = document.querySelector(".js-count-particles");
+      update = function () {
+        stats.begin();
+        stats.end();
+        if (
+          window.pJSDom[0].pJS.particles &&
+          window.pJSDom[0].pJS.particles.array
+        ) {
+          count_particles.innerText =
+            window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+
       $("#contact_form").submit(function (e) {
         e.preventDefault(); // avoid to execute the actual submit of the form.
         var form = $(this);

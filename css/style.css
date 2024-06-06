@@ -455,6 +455,7 @@ pre {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
+
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
@@ -467,6 +468,8 @@ pre {
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
+      
+  
 
 .container-fluid {
   width: 100%;
@@ -8631,9 +8634,162 @@ h1, h2, h3, h4, h5,
         .owl-carousel.home-slider .owl-dots .owl-dot.active {
           background: #fff; }
 
+
+#header-btns{
+  transition: all .4s ease;
+}
+#header-btns:hover{
+  background-color: #ffbd39 !important;
+  color: #000 !important;
+}
+
+#download-resume-btn{
+  transition: all .4s ease;
+}
+#download-resume-btn:hover{
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+
+.particle-container {
+  width: 100%;}
 .socials-stack {
   gap: 20px; /* Add space between pills */
 }
+.social-media span{
+  color: #ffbd39;
+  width:  21px;
+  margin: 8px;
+  transition: all .4s ease;
+}
+.social-media span:hover{
+  color: white;
+}
+.social-media-links{
+  position: absolute;
+  z-index: 2;
+  padding: 60px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+} 
+
+#header{
+  background: transparent;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  animation: scale 1.5s ease;
+  position:relative;
+  display: block;
+}
+.header-content{
+  height: 100vh;
+  width: 100%;
+  float: left;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+}
+.header-content-box{
+  z-index: 2;
+  text-align: center;
+  height: auto;
+  padding-right: 60px;
+  width: auto;
+
+}
+.header-content .firstline{
+  z-index: 2;
+  font-weight:700;
+  font-family: poppins;
+  font-size: 65px;
+}
+.header-content .secondline{
+  z-index: 2;
+  font-size: 30px;
+  padding-top:20px ;
+  font-weight:500;
+  color: rgb(255, 255, 255,.8);
+}
+.slash{
+  animation-name: animateslash;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+@keyframes animateslash{
+  0%{
+      opacity: 1;
+      z-index: 2;
+  }
+  100%{
+      opacity: 0;
+      z-index: 0;
+  }
+}
+@-webkit-keyframes animateslash{
+  0%{
+      opacity: 1;
+      z-index: 2;
+  }
+  100%{
+      opacity: 0;
+      z-index: 0;
+  }
+}
+
+     /* ---- reset ---- */
+     #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 100%;
+      z-index: 2;
+    } 
+    
+    /* ---- stats.js ---- */
+    .count-particles {
+      background: #000022;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 80px;
+      color: #13e8e9;
+      font-size: 0.8em;
+      text-align: left;
+      text-indent: 4px;
+      line-height: 14px;
+      padding-bottom: 2px;
+    }
+    .js-count-particles {
+      font-size: 1.1em;
+    }
+    #stats,
+    .count-particles {
+      -webkit-user-select: none;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+    #stats {
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+    }
+    .count-particles {
+      border-radius: 0 0 3px 3px;
+    }
 
 .hero-wrap {
   width: 100%;
@@ -10061,7 +10217,7 @@ article.active {
   .timeline-item-subtitle {
     font-size: 20px;
     margin-bottom: 10px;
-    color: hsl(45, 54%, 58%);
+    color: #ffbd39;
     }
   
   .timeline-list span {
