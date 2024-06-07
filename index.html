@@ -51,31 +51,59 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <a href="#home-section" class="nav-link"><span>Home</span></a>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <a href="#about-section" class="nav-link"><span>About</span></a>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <a href="#resume-section" class="nav-link"
                 ><span>Experience</span></a
               >
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <a href="#projects-section" class="nav-link"
                 ><span>Projects</span></a
               >
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <a href="#testimonials-section" class="nav-link"
                 ><span>Testimonials</span></a
               >
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <a href="#blog-section" class="nav-link"><span>Blog</span></a>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+            >
               <a href="#contact-section" class="nav-link"
                 ><span>Contact</span></a
               >
@@ -86,7 +114,7 @@
     </nav>
     <section>
       <div class="particle-container">
-        <div class="row">
+        <div class="row" style="margin: 0px">
           <div id="particles-js"></div>
           <div id="header" style="display: block">
             <div class="header-content">
@@ -174,7 +202,9 @@
           <div class="col-md-6 col-lg-7 pl-lg-5">
             <div class="row justify-content-start pb-3">
               <div class="col-md-12 heading-section ftco-animate">
-                <h5>
+                <h1 class="big">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                <h5 class="mt-2">
                   Future-Ready Developer: Leveraging New Tech to Drive Industry
                   Innovation.
                 </h5>
@@ -216,7 +246,7 @@
       </div>
     </section>
 
-    <section class="ftco-section ftco-no-pb mt-5" id="resume-section">
+    <section id="resume-section" class="ftco-section">
       <div class="container">
         <div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
@@ -224,7 +254,7 @@
             <h2 class="mb-4">Experience</h2>
           </div>
         </div>
-        <article class="resume" data-page="resume">
+        <article class="resume">
           <section class="timeline">
             <ul class="timeline-list">
               <li class="timeline-item">
@@ -873,7 +903,7 @@
     <script>
       particlesJS("particles-js", {
         particles: {
-          number: { value: 127, density: { enable: true, value_area: 700 } },
+          number: { value: 120, density: { enable: true, value_area: 1000 } },
           color: { value: "#ffbd39" },
           shape: {
             type: "circle",
@@ -893,14 +923,14 @@
           },
           line_linked: {
             enable: true,
-            distance: 150,
+            distance: 120,
             color: "#ffffff",
             opacity: 0.4,
             width: 1,
           },
           move: {
             enable: true,
-            speed: 3,
+            speed: 2,
             direction: "none",
             random: false,
             straight: false,
