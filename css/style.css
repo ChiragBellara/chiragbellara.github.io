@@ -8710,8 +8710,7 @@ canvas {
 .header-content .firstline{
   z-index: 2;
   font-weight:700;
-  font-family: poppins;
-  font-size: 65px;
+  font-size: 88px;
 }
 .header-content .secondline{
   z-index: 2;
@@ -9132,6 +9131,10 @@ canvas {
         min-width: 400px;
       }
 
+      .project-card .wrapper{
+        min-height: 570px;
+      }
+
       .tech-stack-pill {
         font-size: 10px;
         padding: 3px 8px;
@@ -9153,7 +9156,7 @@ canvas {
       margin-top: 10px;
     }
     .project-card .text {
-      height: 70px;
+      /* height: 70px; */
       margin: 0;
     }
     .project-card input[type=checkbox] {
@@ -10421,7 +10424,7 @@ article.active {
     position: absolute;
     top: 0px;
     left: 0;
-    font-size: 7vw;
+    font-size: 5vw;
     color: rgba(255, 255, 255, 0.1);
     z-index: -1;
     font-weight: 900; }
@@ -10614,9 +10617,6 @@ article.active {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px; }
-  @media (max-width: 991.98px) {
-    .contact-section .box {
-      margin-bottom: 30px; } }
   .contact-section .box .icon {
     width: 100px;
     height: 100px;
@@ -10629,7 +10629,7 @@ article.active {
     border-radius: 50%; }
     .contact-section .box .icon span {
       color: #ffbd39;
-      font-size: 30px; }
+      font-size: 34px; }
   .contact-section .box h3 {
     font-size: 17px;
     font-weight: 500;
