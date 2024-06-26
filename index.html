@@ -369,10 +369,12 @@
               <div
                 class="wrapper"
                 style="
+                  cursor: pointer;
                   background-image: url('../images/project_1.png');
                   background-size: contain;
                   background-repeat: no-repeat;
                 "
+                onclick="openProjectPage('vixlate.html')"
               >
                 <div class="data">
                   <div class="content">
@@ -408,10 +410,12 @@
               <div
                 class="wrapper"
                 style="
+                  cursor: pointer;
                   background-image: url('../images/project_2.png');
                   background-size: contain;
                   background-repeat: no-repeat;
                 "
+                onclick="openProjectPage('biasinLLM.html')"
               >
                 <div class="data">
                   <div class="content">
@@ -446,11 +450,12 @@
               <div
                 class="wrapper"
                 style="
-                  min-height: 650px;
+                  cursor: pointer;
                   background-image: url('../images/project_3.png');
                   background-size: contain;
                   background-repeat: no-repeat;
                 "
+                onclick="openProjectPage('crimerate.html')"
               >
                 <div class="data">
                   <div class="content">
@@ -1123,6 +1128,11 @@
           }
         });
       };
+
+      function openProjectPage(projectPage) {
+        let pageURL = window.location.origin + "/projects/" + projectPage;
+        window.location.href = pageURL;
+      }
 
       const railCon = document.querySelector(".rail-container"),
         rail = document.getElementById("rail"),
