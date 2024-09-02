@@ -9100,7 +9100,7 @@ canvas {
     }
     .project-card .wrapper {
       background-color: #fff;
-      min-height: 540px;
+      min-height: 600px;
       position: relative;
       overflow: hidden;
       box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
@@ -9131,7 +9131,7 @@ canvas {
     
     /* Styles for the tech stack pills */
     .tech-stack {
-      margin-top: 10px;
+      margin-bottom: 10px;
       flex-wrap: wrap; /* Allow wrapping to the next line */
       gap: 8px; /* Add space between pills */
     }
@@ -9144,11 +9144,18 @@ canvas {
       background: #000;
       border-radius: 8px;
       padding: 3px 8px 4px;
-      margin: 20px 2px 1px;
+      /* margin: 20px 2px 1px; */
       font-weight: 500;
       user-select: none;
       border: 1px solid #e3ebf7;
       white-space: nowrap;
+    }
+
+    .project-btns{
+      color: hsl(45, 54%, 58%);
+    }
+    .project-btns:hover{
+      color: hsl(0, 0%, 100%);
     }
     
     /* Media queries to adjust pill styles for smaller screens */
@@ -9181,6 +9188,7 @@ canvas {
       width: 100%;
     }
     .project-card .title {
+      color: hsl(45, 54%, 58%);
       margin-top: 10px;
     }
     .project-card .text {
@@ -10906,6 +10914,67 @@ article.active {
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
+
+
+  .icon {
+    font-size: 0.9rem;
+    display: inline-flex;
+    background: #D8D8D8;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+  }
+  .icon span {
+    border-radius: 5px;
+    padding: 3px 5px;
+  }
+  
+  .react {
+    background: #BAD5F5;
+  }
+  .react span::after {
+    content: "React.js";
+  }
+  
+  .express {
+    background: #F2C986;
+  }
+  .express span::after {
+    content: "Express";
+  }
+  
+  .node {
+    background: #E1C1C1;
+  }
+  .node span::after {
+    content: "Node.js";
+  }
+  
+  .python {
+    background: #EADD86;
+  }
+  .python span::after {
+    content: "Python";
+  }
+  
+  .django {
+    background: #AFEAE5;
+  }
+  .django span::after {
+    content: "Django";
+  }
+  
+  .newcard a {
+    padding-right: 15px;
+  }
+  
+  .github {
+    color: #739150;
+  }
+  
+  .status {
+    color: #7699C2;
+  }
 
 @-webkit-keyframes loader-rotate {
   100% {
