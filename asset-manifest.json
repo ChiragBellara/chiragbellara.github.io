@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f0062eae.css",
+    "main.js": "/static/js/main.034feb05.js",
+    "static/js/453.ced7cdfc.chunk.js": "/static/js/453.ced7cdfc.chunk.js",
+    "static/media/footer-loop.gif": "/static/media/footer-loop.5ca1a74fd794216eaa15.gif",
+    "static/media/project_4.png": "/static/media/project_4.8474ba25c543b9d99a8e.png",
+    "static/media/project_1.png": "/static/media/project_1.43e3b0f2818c3e0bf6d9.png",
+    "static/media/project_5.png": "/static/media/project_5.094b68e74c6e0a9083ec.png",
+    "static/media/project_2.png": "/static/media/project_2.19c203a1de73b27f2bc5.png",
+    "static/media/bg-dark.png": "/static/media/bg-dark.ad8fadf4047b6513ee12.png",
+    "static/media/project_6.png": "/static/media/project_6.5698112944d862859e25.png",
+    "static/media/bg-light.png": "/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/F1.jpeg": "/static/media/F1.2946830c2949019223cd.jpeg",
+    "static/media/project_3.png": "/static/media/project_3.d03755accd965a57c106.png",
+    "static/media/blog_1.jpg": "/static/media/blog_1.1e5ae204fa775478e89e.jpg",
+    "static/media/Gaming.jpeg": "/static/media/Gaming.4e481bb6106edf122e90.jpeg",
+    "static/media/HistoryPhilosophy.jpeg": "/static/media/HistoryPhilosophy.727ee322d47b464f5951.jpeg",
+    "static/media/Math.jpeg": "/static/media/Math.5b82970094a2949649a1.jpeg",
+    "static/media/Anime.jpeg": "/static/media/Anime.61b7f00d1d7a9a9eaa67.jpeg",
+    "static/media/Astronomy.jpeg": "/static/media/Astronomy.1a26b4d3f7410783a7e4.jpeg",
+    "index.html": "/index.html",
+    "main.f0062eae.css.map": "/static/css/main.f0062eae.css.map",
+    "main.034feb05.js.map": "/static/js/main.034feb05.js.map",
+    "453.ced7cdfc.chunk.js.map": "/static/js/453.ced7cdfc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0062eae.css",
+    "static/js/main.034feb05.js"
+  ]
+}
