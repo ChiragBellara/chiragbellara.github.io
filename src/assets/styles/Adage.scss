@@ -1,0 +1,61 @@
+.adage-section {
+    background-color: var(--surface);
+    color: var(--ink-normal);
+    padding: 3rem 1.5rem 3rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.adage-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.adage-icon {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.5));
+}
+
+.adage-sub {
+  color: var(--ink-muted);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.adage-quote {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 auto 1.2rem;
+  max-width: 30ch;
+
+  strong {
+    font-weight: 700;
+    color: #fff;
+  }
+}
+
+.adage-author {
+  color: var(--brand);;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+  letter-spacing: 0.3px;
+}
+
+// /* Light mode variant (optional) */
+// .light-mode .adage-section {
+//   background-color: #f8f9fa;
+//   color: #0d1116;
+//   border-top: 1px solid rgba(0,0,0,0.05);
+
+//   .adage-sub { color: rgba(0,0,0,0.6); }
+//   .adage-author { color: rgba(0,0,0,0.65); }
+// }

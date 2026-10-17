@@ -1,0 +1,20 @@
+{
+    "slug": "curiosity_to_code",
+    "title": "Why I Like Building Things",
+    "subtitle": "Turning curiosity into small pieces of the internet.",
+    "date": "March 06, 2026",
+    "tags": [
+        "Curiosity",
+        "Building",
+        "Personal Projects",
+        "Experimentation",
+        "Learning"
+    ],
+    "imageSrc": "curiosity_to_code.jpg",
+    "imageAlt": "Curiosity to Code Sketch",
+    "content": [
+        "Over the past few years, I’ve realized that most meaningful things in life come from building – sometimes software, sometimes ideas, and sometimes just habits that slowly shape who you become. When I write code, I’m not only solving a technical problem. I’m trying to create something that didn’t exist before: a tool, a system, a small piece of the internet that someone might find useful. There’s something deeply satisfying about turning curiosity into something real.",
+        "A lot of my projects start in a very simple way. A question, a random idea, or a small frustration. What if this process was automated? What if this dataset could tell a story? What if an AI agent could actually do something useful instead of just answering questions? From there, it becomes a process of experimenting, breaking things, rebuilding them, and learning along the way. Most things don’t work the first time, but that’s part of the fun.",
+        "This website is a small collection of those explorations. Some projects are polished, others are rough prototypes, and a few are just experiments that taught me something new. But each one represents a moment of curiosity and the willingness to try building something anyway. If something here sparks an idea for you, then it’s already done its job."
+    ]
+}

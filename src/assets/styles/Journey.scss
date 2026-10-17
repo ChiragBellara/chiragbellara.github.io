@@ -1,0 +1,89 @@
+.journey-list {
+  padding: 3rem 1.5rem 3rem;
+}
+
+.jl-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.jl-heading {
+  font-size: clamp(1.8rem, 4vw, 2.2rem); 
+  color: var(--ink-strong); 
+  margin: 0 0 .35rem;
+}
+
+.jl-intro { 
+  color: var(--ink-normal); 
+  margin: 0 0 1.5rem; 
+}
+
+.jl-divider {
+  border: 0;
+  border-top: 1px solid color-mix(in srgb, var(--ink-normal) 18%, transparent);
+  margin: 0 0 1.75rem;
+}
+
+/* two-column rows */
+.jl-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* mobile */
+  row-gap: 1.75rem;
+
+  @media (min-width: 820px) {
+    grid-template-columns: 180px 1fr; /* left period, right bullets */
+    row-gap: 1.4rem;
+  }
+}
+
+/* each row uses the grid columns */
+.jl-row {
+  display: contents; /* let children occupy grid columns */
+}
+
+.jl-period {
+  color: color-mix(in srgb, var(--ink-normal) 70%, transparent);
+  font-weight: 600;
+  padding-top: .3rem;
+
+  @media (max-width: 819px) {
+    margin-bottom: .35rem;
+  }
+}
+
+.jl-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  gap: .5rem;
+}
+
+.jl-li {
+  position: relative;
+  color: var(--ink-strong);
+  line-height: 1.7;
+  padding-left: 1.1rem;
+}
+
+/* custom bullet */
+.jl-li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: color-mix(in srgb, var(--ink-normal) 75%, transparent);
+}
+
+/* link style matches the screenshot: underlined on hover */
+.jl-li a {
+  color: var(--ink-strong);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color .2s ease;
+}
+.jl-li a:hover {
+  color: var(--brand);
+}

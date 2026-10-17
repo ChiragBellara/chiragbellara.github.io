@@ -1,0 +1,84 @@
+.otic { padding: 3rem 1.5rem 3rem; }
+.otic__inner { max-width: 1100px; margin: 0 auto; }
+.otic__heading { font-size: clamp(1.8rem, 4vw, 2.2rem); color: var(--ink-strong); margin: 0 0 .35rem; }
+.otic__intro { color: var(--ink-normal); margin: 0 0 1.5rem; }
+
+.otic__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+
+  @media (min-width: 700px) { grid-template-columns: 1fr 1fr; }
+  @media (min-width: 1080px) { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.otic__card {
+  position: relative;
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-elev);
+  transition: transform .18s ease, box-shadow .25s ease, border-color .25s ease;
+  outline: none;
+  text-decoration: none;
+}
+
+.otic__figure { margin: 0; position: relative; }
+.otic__img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+}
+
+.otic__top {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 38%;
+  background: linear-gradient(to bottom,
+      rgba(0,0,0,.55),
+      rgba(0,0,0,.28) 55%,
+      transparent 100%);
+  display: flex;
+  align-items: flex-start;
+  padding: .85rem .95rem;
+  pointer-events: none;
+}
+
+.otic__title {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .01em;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  background: rgba(0,0,0,.22);
+  backdrop-filter: blur(6px);
+  padding: .35rem .6rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.18);
+}
+
+.otic__caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: .85rem .95rem;
+  color: #fff;
+  background: linear-gradient(to top,
+      rgba(0,0,0,.58),
+      rgba(0,0,0,.28) 55%,
+      transparent 100%);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .22s ease, transform .22s ease;
+  line-height: 1.55;
+}
+.otic__card:hover .otic__caption,
+.otic__card:focus-visible .otic__caption {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otic__card, .otic__img, .otic__caption { transition: none !important; }
+}

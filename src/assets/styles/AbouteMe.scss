@@ -1,0 +1,115 @@
+.aboutme-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 3rem;
+
+  .aboutme-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .aboutme-text {
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 3.25rem);
+      margin-bottom: 1rem;
+      color: var(--ink-strong);
+    }
+
+    h2 {
+      margin-top: 2.5rem;
+      font-size: 1.25rem;
+      color: var(--brand);
+    }
+
+    p {
+      color: var(--ink-normal);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .closing-line {
+      margin-top: 2.5rem;
+      font-style: italic;
+      color: var(--brand);
+    }
+  }
+
+  .aboutme-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.75rem;
+    margin-top: 2.75rem;
+
+    .aboutme-banner {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        background: var(--bg);
+      }
+    }
+
+    .aboutme-info {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      box-shadow: var(--shadow-elev);
+      text-align: left;
+
+      h3 {
+        margin-bottom: 1rem;
+        color: var(--brand);
+        font-size: 1.1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem;
+        li {
+          margin-bottom: 0.75rem;
+          color: var(--ink-normal);
+        }
+        a {
+          color: var(--brand);
+          text-decoration: underline;
+          &:hover {
+            color: var(--brand-hover);
+          }
+        }
+      }
+
+      .aboutme-socials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        a {
+          color: var(--ink-normal);
+          transition: color 0.2s ease;
+          &:hover {
+            color: var(--brand);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,288 @@
+/* ================================
+  THEME TOKENS (LIGHT DEFAULT)
+  Nordic Minimal (Light)
+================================= */
+:root,
+.theme-light {
+  --brand:        #006d77;   /* ocean teal */
+  --brand-hover:  #0096a3;   /* aqua hover */
+  --accent1:      #e29578;   /* warm coral sand */
+  --accent2:      #83c5be;   /* soft muted aqua */
+
+  --bg:           #f0f4f8;   /* misty white */
+  --surface:      #ffffff;   /* cards/nav */
+  --text:         #0f172a;   /* almost-black */
+  --muted:        #475569;   /* slate for paragraphs */
+  --chip-bg:      rgba(0, 109, 119, 0.10);
+
+  --ink-strong:   var(--text);
+  --ink-normal:   var(--muted);
+  --link:         var(--brand);
+  --link-hover:   var(--brand-hover);
+
+  --border:       rgba(15, 23, 42, 0.15);
+  --shadow-elev:  0 6px 24px rgba(15, 23, 42, 0.08);
+  --shadow-elev2: 0 10px 28px rgba(15, 23, 42, 0.12);
+
+  --about-bg: url("assets/images/bg-light.png");
+
+  color-scheme: light;
+}
+
+/* ================================
+  Nordic Night (Dark)
+================================= */
+.theme-dark {
+  --brand:        #7ed1cc;    /* softened teal for dark */
+  --brand-hover:  #9de3df;
+  --accent1:      #e6a792;    /* softened coral */
+  --accent2:      #9bd6cf;
+
+  --bg:           #0e141b;    /* charcoal-navy */
+  --surface:      #141a22;    /* panels/nav */
+  --text:         #e6edf3;    /* off-white */
+  --muted:        #9aa4b2;    /* cool gray */
+  --chip-bg:      rgba(126, 209, 204, 0.14);
+
+  --ink-strong:   var(--text);
+  --ink-normal:   var(--muted);
+  --link:         var(--brand);
+  --link-hover:   var(--brand-hover);
+
+  --border:       rgba(230, 237, 243, 0.18);
+  --shadow-elev:  0 6px 24px rgba(0, 0, 0, 0.35);
+  --shadow-elev2: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  --about-bg: url("assets/images/bg-dark.png");
+
+  color-scheme: dark;
+}
+
+/* ================================
+  Base
+================================= */
+:root {
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body { font-family: var(--font-body); }
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); }
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1rem !important;
+  background-color: var(--bg);
+  color: var(--ink-strong);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace !important;
+  font-size: 1rem !important;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+a:hover { color: var(--link-hover); }
+
+p, a, h1, h2, h3, h4, h5, label, button {
+  color: var(--ink-strong);
+  // font-family: "Lato", sans-serif;
+  font-family: var(--font-heading);
+}
+
+.main-container {
+  position: relative;
+  background-color: var(--bg);
+}
+
+/* ================================
+  Navigation Bar
+================================= */
+.navigation-bar {
+  justify-content: space-between;
+  background-color: var(--surface);
+  box-shadow: var(--shadow-elev);
+
+  button {
+    font-size: 1.1rem;
+    font-family: "Lato", sans-serif;
+    text-transform: initial;
+    padding: 6px 10px;
+    color: var(--ink-strong);
+  }
+
+  svg { cursor: pointer; color: var(--ink-strong); }
+}
+
+/* Mobile menu overlay content */
+.navigation-bar-responsive {
+  span, p {
+    color: var(--ink-strong);
+    font-family: "Lato", sans-serif;
+  }
+}
+
+/* ================================
+  Layout Containers
+================================= */
+.container {
+  // margin-top: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-image {
+  width: 100%;
+  height: 450px;
+
+  img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.mobile-menu-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.items-container {
+  padding: 5% 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ================================
+  About / Skills / Chips / Timeline
+================================= */
+.about-section {
+  transition: background-image 0.3s ease, background-color 0.3s ease;
+}
+
+.skills-container svg { color: var(--ink-strong); }
+
+.chip {
+  background-color: var(--chip-bg);
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.06), 0px 2px 2px 0px rgba(0,0,0,0.08), 0px 1px 5px 0px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+}
+
+.vertical-timeline::before { background-color: var(--border); }
+
+.vertical-timeline--animate .vertical-timeline-element-content.bounce-in {
+  box-shadow: var(--shadow-elev);
+  background: var(--surface);
+  color: var(--ink-strong);
+}
+
+.vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+  color: var(--ink-normal);
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right: 7px solid var(--border) !important;
+}
+
+.flex-chips .chip-title { color: var(--ink-strong); }
+
+/* ================================
+  Projects / Blogs / Publications
+================================= */
+.projects-container .projects-grid .project,
+.blogs-container .blogs-grid .blog,
+.publications-container .publications-grid .publication {
+  text-align: left;
+  border: 1px solid var(--border);
+  padding: 10px 10px 15px;
+  background: var(--surface);
+  box-shadow: var(--shadow-elev);
+  transition: transform .2s ease, box-shadow .25s ease, background .25s ease;
+}
+.projects-container .projects-grid .project:hover,
+.blogs-container .blogs-grid .blog:hover,
+.publications-container .publications-grid .publication:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-elev2);
+}
+
+/* ================================
+  Buttons
+================================= */
+.resume-button,
+.code-button {
+  background-color: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+  border: 1px solid var(--brand);
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .15s ease, box-shadow .25s ease;
+  box-shadow: 0 4px 12px rgba(0, 109, 119, 0.22);
+}
+
+.resume-button:hover,
+.code-button:hover {
+  background-color: var(--brand-hover);
+  color: #fff;
+  border-color: var(--brand-hover);
+  transform: translateY(-1px);
+}
+
+.theme-light .resume-button:hover,
+.theme-light .code-button:hover {
+  background-color: #fff;
+  color: var(--ink-strong);
+  border-color: var(--brand);
+}
+
+/* Footer */
+.footer-adage { color: var(--ink-strong); }
+
+/* ================================
+  Theme Toggle Button (utility)
+  Place the button anywhere; this styles a simple chip.
+================================= */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-strong);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-elev);
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, border-color .25s ease, transform .15s ease;
+}
+.theme-toggle:hover { transform: translateY(-1px); }
+.theme-toggle svg { color: var(--ink-strong); }
+
+/* ================================
+  Responsive
+================================= */
+@media screen and (max-width: 768px) {
+  .items-container { padding: 5% 5%; }
+}

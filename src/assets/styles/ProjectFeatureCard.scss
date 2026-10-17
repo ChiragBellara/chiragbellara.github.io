@@ -1,0 +1,113 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.pf-card {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%; /* ensure uniform card height */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-elev);
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: var(--shadow-elev2);
+  }
+}
+
+/* image section */
+.pf-media img {
+  width: 100%;
+  height: 220px; /* fixed height for uniformity */
+  object-fit: cover;
+  display: block;
+}
+
+/* text section */
+.pf-body {
+  padding: 1.5rem 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes cta to bottom */
+  flex: 1; /* allows body to fill available space */
+}
+
+/* tags */
+.pf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.pf-tag {
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+/* title */
+.pf-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink-strong);
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1.2;
+}
+
+/* blurb */
+.pf-blurb {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-normal);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.pf-cta-div{
+  padding: 0.9rem 0;
+}
+
+/* CTA buttons */
+.pf-cta {
+  align-self: start;
+  background: var(--brand);
+  color: var(--bg);
+  text-decoration: none;
+  padding: 0.9rem 1.25rem;
+  border-radius: 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.pf-cta:hover {
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+}
+
+.pf-extra-cta{
+  margin-left: 1rem;
+}
+
+/* Responsive tweak */
+@media (max-width: 700px) {
+  .pf-media img {
+    height: 200px;
+  }
+
+  .pf-body {
+    padding: 1.25rem;
+  }
+}
