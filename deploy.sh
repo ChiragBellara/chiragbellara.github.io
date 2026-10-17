@@ -15,7 +15,8 @@ cd $BUILD_DIR
 
 echo "🧹 Initializing a fresh Git repo..."
 git init
-git remote add origin $REPO_URL
+git remote remove origin 2>/dev/null || true
+git remote add origin "$REPO_URL"
 
 echo "📁 Adding and committing build files..."
 git add .
